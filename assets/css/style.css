@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 7%;
+    border: 2px solid rgb(255, 255, 255);
+
+}
+
+.head-container {
+    width: 80vw;
+    margin:10px auto;
+    background-color: black;
+     height: 150px;
+}
+.logo-container{
+  display: flex;
+  justify-content: start;
+}
+.nav-container{
+    display: flex;
+    justify-content: center;
+}
+.trend-bar {
+    position: relative;
+}
+
+.trend{
+    position: absolute;
+    left: 40px;
+    top: 0px;
+}
+.live-bar{
+    position: relative;
+}
+.live{
+    position: absolute;
+    left: 80px;
+}
