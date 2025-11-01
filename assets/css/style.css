@@ -184,4 +184,118 @@ margin-left: 80px;
 .social{
     margin-left: 1233px;
     margin-top: -80px;
+    display: flex;
+    justify-content: end;
+} 
+
+
+
+@media (max-width: 992px) {
+    .head-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-container {
+        margin: 0;
+    }
+
+    .button button {
+        width: 120px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .form input {
+        width: 80%;
+    }
+
+    .form button {
+        width: 150px;
+    }
+
+    .playstore, .appstore {
+        width: 25%;
+    }
+
+    .list {
+        margin-left: 0;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 40%;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form input {
+        width: 90%;
+    }
+
+    .form button {
+        width: 80%;
+    }
+
+    .playstore, .appstore {
+        width: 40%;
+        justify-content: center;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .button button {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .nav-container span {
+        font-size: 16px;
+    }
+
+    .playstore, .appstore {
+        width: 70%;
+    }
+
+    .list ul li a {
+        font-size: 13px;
+    }
+
+    .form input {
+        height: 45px;
+    }
 }
