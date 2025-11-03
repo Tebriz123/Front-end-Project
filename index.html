@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exxen</title>
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,47 +19,42 @@
 
 
     <header>
-        <div class="cus-container">
-            <div class="head-container">
-                <div class="head-bar">
-                    <div class="logo-container">
-                        <a href="#"><img class="logo" src="assets/img/exxen-logo.png" alt=""></a>
-                    </div>
-                    <div class="nav-container">
-                        <ul>
-                            <li>
-                                <i class="fa-regular fa-house"></i>
-                                <span>Kesfet</span>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-tv"></i>
-                                <span>Canli</span>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <span>Arama</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="button">
-                        <button class="language-btn"><i class="fa-solid fa-globe"></i>Tr</button>
-                        <button class="login-btn">Uye Girisi</button>
-                    </div>
+        <div class="head-container">
+            <div class="head-bar">
+                <div class="logo-container">
+                    <a href="#"><img class="logo" src="assets/img/exxen-logo.png" alt=""></a>
                 </div>
+                <div class="nav-container">
+                    <ul>
+                        <li>
+                            <a href="index.html"><i class="fa-regular fa-house"></i>Kesfet</a>
 
-                <div class="form">
-                    <form>
-                        <input type="text" placeholder="Ad Soyad">
-                        <input type="email" placeholder="E-posta">
-                    </form>
-                    <button>Uye Ol</button>
+                        </li>
 
+                        <li>
+                            <a href="#"><i class="fa-solid fa-tv"></i>Canli</a>
+
+                        </li>
+                        <li>
+                            <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i>Arama</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <button type=" button" class="language-btn"><i class="fa-solid fa-globe"></i>Tr</button>
+                    <button type="button" class="login-btn">Uye Girisi</button>
                 </div>
             </div>
 
+            <div class="form">
+                <form>
+                    <input type="text" placeholder="Ad Soyad">
+                    <input type="email" placeholder="E-posta">
+                    <button type="submit">Uye Ol</button>
+                </form>
+            </div>
         </div>
-
 
 
     </header>
@@ -65,51 +63,100 @@
 
     <main>
 
+
+        <div class="head-container">
+            <div id="exxenSlider" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/godfather.webp" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>The GodFather</h5>
+                            <p>Film 1 haqqında qısa məlumat.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/img/fightclub.avif" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Fight Club</h5>
+                            <p>Film 2 haqqında qısa məlumat.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/img/prestige.webp" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Prestige</h5>
+                            <p>Film 3 haqqında qısa məlumat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <button class="carousel-control-prev" type="button" data-bs-target="#exxenSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#exxenSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="scroll-btn left-btn">&lt;</button>
+                <div class="row id" id="movies">
+
+                </div>
+                <button class="scroll-btn right-btn">&gt;</button>
+            </div>
+
+        </div>
     </main>
 
     <footer>
+        <div class="head-container">
+            <div class="foot-container">
+                <div class="salam">
+                    <div class="playstore">
+                        <a href="#">
+                            <img src="assets/img/playstore.jpeg" alt="GET IT ON GooglePlay">
+                            <p>GET IT ON GooglePlay</p>
+                        </a>
 
-        <div class="cus-container">
-            <div class="head-container">
-                <div class="playstore">
-                    <a href="#">
-                        <img src="assets/img/playstore.jpeg" alt="GET IT ON GooglePlay">
-                        <p>GET IT ON GooglePlay</p>
-                    </a>
+                    </div>
+                    <div class="appstore">
+                        <a href="#">
+                            <img src="assets/img/AppStore.png" alt="Download on the AppStore">
+                            <span>Download on the AppStore</span></a>
 
-                </div>
-                <div class="appstore">
-                    <a href="#">
-                        <img src="assets/img/AppStore.png" alt="Download on the AppStore">
-                        <span>Download on the AppStore</span></a>
-
-                </div>
-                <div class="list">
-                    <ul>
-                        <li><a href="#">Çerez Politikası</a></li>
-                        <li><a href="#">KVK Politikası</a></li>
-                        <li><a href="#">Kullanım Şartları</a></li>
-                        <li><a href="#">Üyelik Sözleşmesi</a></li>
-                        <li><a href="#">Çerez Tercihlerimi Yönet</a></li>
-                    </ul>
-                    <ul class="ul">
-                        <li><a href="#">Bize Ulaşın</a></li>
-                        <li><a href="#">SSS</a></li>
-                        <li><a href="#">Şirket Künyes</a></li>
-                        <li><a href="#">İlgili Kişi Formu</a></li>
-                    </ul>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Çerez Politikası</a></li>
+                            <li><a href="#">KVK Politikası</a></li>
+                            <li><a href="#">Kullanım Şartları</a></li>
+                            <li><a href="#">Üyelik Sözleşmesi</a></li>
+                            <li><a href="#">Çerez Tercihlerimi Yönet</a></li>
+                        </ul>
+                        <ul class="ul">
+                            <li><a href="#">Bize Ulaşın</a></li>
+                            <li><a href="#">SSS</a></li>
+                            <li><a href="#">Şirket Künyes</a></li>
+                            <li><a href="#">İlgili Kişi Formu</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="social">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-solid fa-xmark"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-tiktok"></i>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
 
                 </div>
-
             </div>
+
         </div>
     </footer>
 
