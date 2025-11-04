@@ -23,6 +23,7 @@ body {
     z-index: 2;
     width: 100%;
     top: 0;
+
 }
 
 .head-bar {
@@ -60,6 +61,10 @@ body {
 .nav-container i {
     margin-right: 5px;
 }
+.nav-container :hover{
+    color: #ffcb04;
+    
+}
 
 
 
@@ -67,7 +72,34 @@ body {
     display: flex;
 }
 
-.button button {
+.login-btn:hover{
+    color: #ffcb04;
+    border: 3px solid #ffcb04;
+}
+
+.language-btn {
+    margin-left: 10px;
+    width: 90px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: 3px solid wheat;
+    padding: 5px 20px;
+
+}
+.language-btn:hover{
+    color: #ffcb04;
+    border: 3px solid #ffcb04;
+}
+.form button:hover{
+    color: white;
+    background-color: #7f6b1a;
+    border: 1px solid #7f6b1a;
+}
+
+.login-btn {
     margin-left: 10px;
     height: 50px;
     border-radius: 25px;
@@ -110,9 +142,11 @@ form {
     background-color: yellowgreen;
     font-size: medium;
 }
-.fa-bars{
+
+.burger-btn {
     color: white;
     display: none;
+    cursor: pointer;
 }
 
 
@@ -150,7 +184,7 @@ form {
 }
 
 footer {
-    margin-top: 10vh;
+    margin-top: 15vh;
     bottom: 0px;
 }
 
@@ -283,18 +317,38 @@ footer {
     .foot-bar {
         display: block;
     }
-    .login-btn{
-    display: none;
-}
-.fa-bars{
-    color: white;
-    display: block;
-    justify-content: end;
-    margin: 10px 12px;
-}
+
+    .login-btn {
+        display: none;
+    }
+
+    .burger-btn {
+        color: white;
+        display: block;
+        justify-content: end;
+        margin: 10px 12px;
+    }
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .movie-details img {
+        width: 50%;
+    }
+
+    .movie-name {
+        font-size: 2rem;
+    }
+
+    .movie-summary {
+        font-size: 0.95rem;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 440px) {
     .logo {
         width: 80px;
     }
@@ -327,7 +381,7 @@ footer {
 
 
     }
-   
+
 }
 
 .carousel-inner {
@@ -480,7 +534,7 @@ footer {
 }
 
 .movie-details img {
-    width: 80%;
+    width: 60%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
@@ -508,22 +562,95 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .movie-details {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
+    
+}
 
-    .movie-details img {
-        width: 70%;
-    }
+.language-menu {
+    position: absolute;
+    width: 150px;
+    top: 85px;
+    right: 165px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 217, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    padding: 10px 15px;
+    z-index: 2;
+    text-align: center;
+}
 
-    .movie-name {
-        font-size: 2rem;
-    }
+.language-menu p {
+    color: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+}
 
-    .movie-summary {
-        font-size: 0.95rem;
-    }
+.language-menu p:hover {
+    color: #ffcc00;
+}
+
+.language-menu.active {
+    display: flex;
+}
+
+
+
+
+/* Language menu */
+.language-menu {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  background: #111;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+.language-menu.active {
+  display: flex;
+}
+
+.language-menu p {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.language-menu p:hover {
+  background: #f1c40f;
+  color: #000;
+}
+
+/* Mobil menyu */
+.mobile-menu {
+  display: none;
+  background: radial-gradient(circle at top, #2b2200, #000);
+  z-index: 1500;
+}
+
+.mobile-menu.active {
+  display: flex !important;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+/* Burger icon desktopda gizlənir */
+@media (min-width: 768px) {
+  .burger-btn {
+    display: none !important;
+  }
+}
+
+/* Mobil görünüşdə linklər gizlənir */
+@media (max-width: 767px) {
+  .nav-links,
+  .login-btn {
+    display: none !important;
+  }
 }
