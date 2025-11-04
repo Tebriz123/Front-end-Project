@@ -1,11 +1,10 @@
 const row = document.querySelector("#movies");
 const searchInput = document.querySelector("#searchInput");
 
-// Hər hərf yazıldıqda axtarış et
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.trim();
 
-  // Əgər input boşdursa, ümumi filmləri göstər
+
   if (query === "") {
     fetch("https://api.tvmaze.com/shows")
       .then(res => res.json())
@@ -13,7 +12,7 @@ searchInput.addEventListener("input", () => {
     return;
   }
 
-  // Hər yazı dəyişəndə fetch et (API: TVMaze Search)
+
   fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
     .then(res => res.json())
     .then(data => {
@@ -22,12 +21,11 @@ searchInput.addEventListener("input", () => {
     });
 });
 
-// Filmləri göstərmək funksiyası
 function showMovies(movies) {
-  row.innerHTML = ""; // Köhnə nəticələri təmizlə
+  row.innerHTML = ""; 
   movies.forEach(movie => {
     row.innerHTML += `
-      <div class="col-12">
+      <div class="col-3">
         <div class="card" style="width: 18rem;">
           <img src="${movie.image ? movie.image.medium : 'https://via.placeholder.com/210x295?text=No+Image'}" class="card-img-top">
           <div class="card-body">
@@ -40,7 +38,6 @@ function showMovies(movies) {
   });
 }
 
-// Səhifə açılarkən bütün filmləri göstər
 fetch("https://api.tvmaze.com/search/shows?q=bitten")
   .then(res => res.json())
   .then(data => showMovies(data));

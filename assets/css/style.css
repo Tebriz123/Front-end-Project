@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 
@@ -13,8 +13,16 @@ body {
 
 .head-container {
     width: 100%;
-    background-color: black;
 
+
+}
+
+.stick-header {
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
 }
 
 .head-bar {
@@ -102,80 +110,26 @@ form {
     background-color: yellowgreen;
     font-size: medium;
 }
+.fa-bars{
+    color: white;
+    display: none;
+}
+
 
 /*Footer*/
 .foot-container {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 15px;
-    min-height: 300px;
     display: flex;
     justify-content: start;
-    padding: 5px 0;
-
-
 }
-
-.playstore {
-
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    width: 120px;
-    border: 1px solid white;
-    border-radius: 8px;
-}
-
-.appstore {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    width: 120px;
-    border: 1px solid white;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.playstore a {
-    display: flex;
-    gap: 10px;
-    color: white;
-    font-size: 12px;
-}
-
-.appstore a {
-    display: flex;
-    gap: 10px;
-    color: white;
-    font-size: 12px;
-    align-items: center;
-}
-
-.playstore img {
-    width: 30px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    display: grid;
-    align-items: center;
-
-}
-
 
 .appstore img {
-    width: 30px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    display: grid;
-    align-items: center;
+    margin-top: 20px;
 
 }
 
 .list {
     display: flex;
-    margin-left: 220px;
-    margin-top: -80px;
+
 }
 
 .list ul li a {
@@ -184,28 +138,23 @@ form {
     font-size: smaller;
 }
 
-.ul {
-    margin-left: 80px;
-}
-
 .social i {
-    /* background-color: black; */
     color: white;
-    margin-left: 5px;
-    /* display: flex;
-    justify-content: end; */
 }
 
-.social {
+.foot-bar {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: end;
-
+    justify-content: space-between;
 }
 
-.salam {
-    width: 100%;
+footer {
+    margin-top: 10vh;
+    bottom: 0px;
 }
 
+/* 🔹 RESPONSIV HİSSƏ */
 
 @media (max-width: 992px) {
     .nav-container ul {
@@ -223,6 +172,51 @@ form {
 
     .list {
         justify-content: center;
+    }
+
+    .foot-bar {
+        display: block;
+    }
+
+    .foot-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .store {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .playstore img,
+    .appstore img {
+        width: 140px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .list {
+        justify-content: center;
+        align-items: start;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .list ul {
+        padding: 0;
+    }
+
+    .list ul li {
+        margin-bottom: 6px;
+    }
+
+    .social {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 }
 
@@ -272,6 +266,32 @@ form {
         width: 100%;
 
     }
+
+    .list ul li a {
+        font-size: 12px;
+    }
+
+    .playstore img,
+    .appstore img {
+        width: 130px;
+    }
+
+    .social i {
+        font-size: 16px;
+    }
+
+    .foot-bar {
+        display: block;
+    }
+    .login-btn{
+    display: none;
+}
+.fa-bars{
+    color: white;
+    display: block;
+    justify-content: end;
+    margin: 10px 12px;
+}
 }
 
 @media (max-width: 480px) {
@@ -307,8 +327,12 @@ form {
 
 
     }
+   
 }
 
+.carousel-inner {
+    margin-top: 160px;
+}
 
 .carousel-item img {
     height: 650px;
@@ -340,31 +364,28 @@ form {
 
 #movies::-webkit-scrollbar {
     height: 8px;
-    /* Scroll çubuğunun qalınlığı */
 }
 
 #movies::-webkit-scrollbar-thumb {
     background-color: #ffcb04;
-    /* Scroll çubuğunun rəngi */
     border-radius: 10px;
 }
 
 .card {
     flex: 0 0 auto;
-    /* Kartların ölçüsünü sabit saxla */
     width: 18rem;
 }
 
 .scroll-btn {
     position: absolute;
-    top: 900px;
+    top: 1050px;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6);
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 5px 7px;
     border-radius: 50%;
     z-index: 10;
     transition: background-color 0.3s ease;
@@ -376,11 +397,11 @@ form {
 }
 
 .left-btn {
-    left: 10px;
+    left: 70px;
 }
 
 .right-btn {
-    right: 10px;
+    right: 70px;
 }
 
 #exxenSlider {
@@ -434,7 +455,7 @@ form {
 .search-box i {
     color: aliceblue;
     position: absolute;
-    left: 45px;
+    left: 3%;
     top: 45px;
     z-index: 1;
 
@@ -442,4 +463,67 @@ form {
 
 .card {
     margin-top: 100px;
+}
+
+
+/*details*/
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 40px;
+    background-color: #000;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.movie-details img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.movie-name {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.movie-summary {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #ccc;
+}
+
+.movie-genres {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #c8dc48;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .movie-details img {
+        width: 70%;
+    }
+
+    .movie-name {
+        font-size: 2rem;
+    }
+
+    .movie-summary {
+        font-size: 0.95rem;
+    }
 }
