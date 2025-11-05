@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exxen</title>
-
-
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -47,9 +47,27 @@
                             <i class="fa-solid fa-globe"></i> <span>Tr</span>
                         </button>
                         <button type="button" class="login-btn">Log In</button>
-                        <div class="burger-btn">
-                            <a href=""><i class="fa-solid fa-bars fa-2x"></i></a>
+
+                        <button id="burger-btn" type="button" class="burger-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <div id="burger-menu">
+                            <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+
+                            <div class="menu-profile">
+                                <i class="fa-solid fa-user"></i>
+                                <button class="login-register">Login / Register</button>
+                            </div>
+
+                            <ul class="menu-links">
+                                <a href="index.html"><li class="active"><i class="fa-regular fa-house"></i> Explore</li></a>
+                                <li><i class="fa-solid fa-tv"></i> Live</li>
+                                <a href="search.html"><li><i class="fa-solid fa-magnifying-glass"></i> Search</li></a>
+                                <li><i class="fa-regular fa-circle-question"></i> Help</li>
+                            </ul>
                         </div>
+
                         <div class="language-menu">
                             <p data-lang="En">Engilish</p>
                             <p data-lang="Tr">Turkish</p>
@@ -83,7 +101,7 @@
                         <img src="assets/img/godfather.webp" class="d-block w-100" alt="Slide 1">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>The GodFather</h5>
-                           
+
                         </div>
                     </div>
 
@@ -91,7 +109,7 @@
                         <img src="assets/img/fightclub.avif" class="d-block w-100" alt="Slide 2">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Fight Club</h5>
-                          
+
                         </div>
                     </div>
 
@@ -99,7 +117,7 @@
                         <img src="assets/img/prestige.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Prestige</h5>
-                           
+
                         </div>
                     </div>
 
@@ -107,56 +125,56 @@
                         <img src="assets/img/fury.jpg" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Fury</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/gone-girl-2014.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Gone-Girl</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/inception-2010.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Inception</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/inglourious-basterds-2009.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Inglourious Basterds</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/la-casa-de-papel.jpg" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>La Casa De Papel</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/prison break.jpg" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Prison Break</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/seven-1995.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Seven</h5>
-                           
+
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/Shutter-island.webp" class="d-block w-100" alt="Slide 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Shutter Island</h5>
-                           
+
                         </div>
                     </div>
                 </div>

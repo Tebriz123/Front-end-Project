@@ -38,3 +38,21 @@ document.addEventListener("click", (e) => {
     langMenu.classList.remove("active");
   }
 });
+
+const burgerBtn = document.getElementById("burger-btn");
+const burgerMenu = document.getElementById("burger-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+burgerBtn.addEventListener("click", () => {
+  burgerMenu.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+  burgerMenu.classList.remove("active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === burgerMenu) {
+    burgerMenu.classList.remove("active");
+  }
+});
