@@ -5,12 +5,16 @@ const id = window.location.search.slice(4)
 fetch(`https://api.tvmaze.com/shows/${id}`)
     .then(response => response.json())
     .then(movie => {
-        mainDetails.innerHTML += `
-    <h1 class="movie-name">${movie.name}</h1>
-           <img src="${movie.image.original}" alt="${movie.name}">
-         <p class="movie-summary">${movie.summary}</p>
-             <p class="movie-genres">${movie.genres}</p>
-    `  
+       mainDetails.innerHTML += `
+    <img src="${movie.image.original}" alt="${movie.name}">
+    <div class="movie-info">
+        <h1 class="movie-name">${movie.name}</h1>
+        <p class="movie-genres">${movie.genres.join(", ")}</p>
+        <p class="movie-language">${movie.language}</p>
+        <p class="movie-raiting">IMDb: ${movie.rating.average}</p>
+        <p class="movie-summary">${movie.summary}</p>
+        
+    </div>`
     })
     const langBtn = document.querySelector(".language-btn");
 const langMenu = document.querySelector(".language-menu");

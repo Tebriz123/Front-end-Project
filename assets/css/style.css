@@ -188,7 +188,6 @@ footer {
     bottom: 0px;
 }
 
-/* 🔹 RESPONSIV HİSSƏ */
 
 @media (max-width: 992px) {
     .nav-container ul {
@@ -346,6 +345,21 @@ footer {
     .movie-summary {
         font-size: 0.95rem;
     }
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-details img {
+        width: 80%;
+    }
+
+    .movie-info {
+        max-width: 90%;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 440px) {
@@ -487,7 +501,7 @@ footer {
 }
 
 #searchInput {
-    width: 95%;
+    width: 90%;
     margin: 35px auto;
     height: 50px;
     background-color: black;
@@ -509,7 +523,7 @@ footer {
 .search-box i {
     color: aliceblue;
     position: absolute;
-    left: 3%;
+    left: 5.5%;
     top: 45px;
     z-index: 1;
 
@@ -523,43 +537,53 @@ footer {
 /*details*/
 .movie-details {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    padding: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
     background-color: #000;
     color: #fff;
     flex-wrap: wrap;
 }
 
+
 .movie-details img {
-    width: 60%;
+    width: 40%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 50%;
+    text-align: left;
+    gap: 15px;
+}
+
 .movie-name {
     font-size: 2.5rem;
-    margin-bottom: 15px;
     font-weight: bold;
     color: #fff;
+    text-align: center;
+}
+
+.movie-genres {
+    font-weight: bold;
+    color: #c8dc48;
+    font-size: 1.3rem;
 }
 
 .movie-summary {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 800px;
     color: #ccc;
 }
 
-.movie-genres {
-    font-weight: bold;
-    margin-top: 15px;
-    color: #c8dc48;
-    font-size: 25px;
-}
+
 
 
 .language-menu {
@@ -591,5 +615,13 @@ footer {
     display: flex;
 }
 
+
+
+.menu-button{
+    display: none;
+}
+.close-button{
+    display: none;
+}
 
 
